@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediction League</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="{{ url_for('points_table')}}">Prediction League</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="{{ url_for('points_table')}}">Points Table</a></li>
+				<li><a href="{{ url_for('predictions')}}">Predictions</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		{% block body %}{% endblock %}
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<span class="text-muted">Prediction League</span>
+		</div>
+	</footer>
+
+</body>
+</html>
